@@ -1,0 +1,118 @@
+
+.deluxe-rel-cnt {
+    position: relative;
+    display:block;
+}
+
+input[data-deluxe] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.deluxe-rel-cnt > span.deluxe-place-holder {
+    left: 0;
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 11px;
+    top: 0;
+    background-color: #444;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.deluxe-rel-cnt.deluxe-focus {
+    z-index: 1;
+}
+
+    .deluxe-rel-cnt.deluxe-focus > span.deluxe-place-holder {
+        -moz-animation: deluxefocus .3s forwards;
+        -o-animation: deluxefocus .3s forwards;
+        -webkit-animation: deluxefocus .3s forwards;
+        animation: deluxefocus .3s forwards;
+    }
+
+.deluxe-rel-cnt.deluxe-blur > span.deluxe-place-holder {
+    -moz-animation: deluxeblur .3s forwards;
+    -o-animation: deluxeblur .3s forwards;
+    -webkit-animation: deluxeblur .3s forwards;
+    animation: deluxeblur .3s forwards;
+}
+
+
+@-moz-keyframes deluxeblur {
+    from {
+        top: -20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes deluxeblur {
+    from {
+        top: -20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes deluxeblur {
+    from {
+        top: -20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes deluxefocus {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: -20px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes deluxefocus {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: -20px;
+        opacity: 1;
+    }
+}
+
+@keyframes deluxefocus {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: -20px;
+        opacity: 1;
+    }
+}
